@@ -1,0 +1,58 @@
+body {
+    background: url(../img/bg.png);
+}
+h1{
+    font-weight: bold;
+
+}
+h3{
+    text-decoration: underline;
+}
+h4{
+    text-decoration: underline;
+}
+.btn{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.site {
+    font-family: '', sans-serif;
+    background-color: #d2d2d2;
+    border-radius: 10px;
+}
+.logo{
+    
+        font-family: 'Holtwood One SC', sans-serif;
+        color: #78290F;
+        text-shadow: 2px 2px #FF7D00;
+        font-size: 70px;
+        padding: 40px 0px;
+        text-align: center;
+        font-weight: bold;
+}
+.img-thumbnail {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    
+}
+.img-thumbnail img {
+    
+	width: 50%;
+}
+.caption{
+    margin: 10px 20px;
+}
+.accent{
+    font-weight: bold;
+}
+.form-actions{
+    margin-bottom: 10px;
+}
+label{
+    font-size: 22px;
+    text-decoration: underline #78290F;
+    font-weight: bold;
+}
+
+
