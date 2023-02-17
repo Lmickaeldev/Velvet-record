@@ -1,3 +1,12 @@
+<?php
+                require 'database.php';
+
+                $db = Database::connect();
+
+                $statement = $db->query("SELECT * FROM `disc` JOIN `artist` ON disc.artist_id = artist.artist_id;");
+                ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -21,31 +30,28 @@
         <div class="tab">
             <div class="row">
                 <h1>Consulter un vinyle <span><a class="btn btn-primary link" href="insert.php"><span class="bi-plus"></span> ajouter un vinyle</a></span></h1>
-
-                <?php
-                require 'database.php';
-
-                $db = Database::connect();
-
-                $statement = $db->query("SELECT * FROM `disc` JOIN `artist` ON disc.artist_id = artist.artist_id;");
                 
-                while ($artist = $statement->fetch()) { 
-                    echo '<div class="col-md-6 ">';
-                    echo '<div class="img-thumbnail">';
-                    echo '<img src="'.'/assets/img/'.$artist["disc_picture"].'" class="img-fluid" alt="'.$artist["disc_picture"].'">';
-                    echo '<div class="caption">';
-                    echo '<h4>'.$artist["disc_title"].'</h4>';
-                    echo '<p><span class="accent">'.$disc["artist_id"].'</span></p>';
-                    echo '<p><span class="accent">Label</span> :'.$artist["disc_label"].'</p>';
-                    echo '<p><span class="accent">année</span> :'.$artist["disc_year"].'</p>';
-                    echo '<p><span class="accent">genre</span> :'.$artist['disc_genre'].'</p>';
-                    echo '<div class="boutton">';
-                    echo '<a class="btn btn-primary" role="button" href="view.php?id='.$artist['disc_id'].'">Détails</a>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                };
+                <?php
+                while ($artist = $statement->fetch()) 
+                 { ?>
+                
+                    <?=' <div class="col-md-6 ">'.
+                    '<div class="img-thumbnail">'.
+                    '<img src="/assets/img/'.$artist["disc_picture"].'" class="img-fluid" alt="'.$artist["disc_picture"].'">'.
+                    '<div class="caption">'.
+                    '<h4>'.$artist["disc_title"].'</h4>'.
+                    '<p><span class="accent">'.$artist["artist_name"].'</span></p>'.
+                    '<p><span class="accent">Label</span> :'.$artist["disc_label"].'</p>'.
+                    '<p><span class="accent">année</span> :'.$artist["disc_year"].'</p>'.
+                    '<p><span class="accent">genre</span> :'.$artist['disc_genre'].'</p>'.
+                    '<div class="boutton">'.
+                    
+                    '<a class="btn btn-primary" role="button" href="view.php?id='.$artist['disc_id'].'">Détails</a>'.
+                    '</div>'.
+                    '</div>'.
+                    '</div>'.
+                    '</div>'?>
+              <?php  };
 
                 ?>
             </div>

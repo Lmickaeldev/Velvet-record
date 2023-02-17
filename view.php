@@ -41,9 +41,11 @@
             <div class="col-md-6"><h1><strong>voir un vinyle</strong></h1>
             <br>
             <form>
+            <?='<p><span class="accent">'.$artist["artist_name"].'</span></p>'?>
                 <div class="form-group">
                     <label>titre :</label><?php  echo  ' '.$artist['disc_title']; ?>
                 </div>
+                
                 <div class="form-group">
                     <label>année :</label><?php echo ' '.$artist['disc_year']; ?>
                 </div>
@@ -65,12 +67,12 @@
             </form>
             </div>
                 <div class="col-md-6 site">
-                            <div class="img-thumbnail">
+                            <div class="img-thumbnail-2">
                                 <img src="<?php echo '/assets/img/' . $artist["disc_picture"] ; ?>" class="img-fluid" alt="...">
                                 </div>
-                                <div class="caption">
+                                <div class="caption-2">
                                     <h4><?php echo $artist['disc_title']; ?></h4>
-                                    <p><?php echo $disc["artist_id"]; ?></p>
+                                    <p><?php echo $artist["artist_name"]; ?></p>
                                 </div>
                             </div>
                 </div> 
