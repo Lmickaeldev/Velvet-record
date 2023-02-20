@@ -6,7 +6,7 @@ class Database
     private static $dbHost = "localhost";
     private static $dbName = "record";
     private static $dbUser = "Lmickael";
-    private static $dbUserPassword = "Nathan241121.";
+    private static $dbUserPassword = "afpa404";
 
     private static $connection = null;
 

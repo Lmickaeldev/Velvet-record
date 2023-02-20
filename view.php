@@ -77,8 +77,9 @@
                             </div>
                 </div> 
             
-                <div class="form-action"><a class="btn btn-primary" href="index.php"><i class="bi bi-arrow-left"></i>RETOUR</a></div>
-            
+                <div class="form-action"><a class="btn btn-primary" href="index.php"><i class="bi bi-arrow-left"></i>RETOUR</a>
+                <a class="btn btn-primary" role="button" href="update.php?id=<?=$artist['disc_id']?>">modifier</a>
+            </div>
             </div>
         </div>
     </body>
